@@ -135,7 +135,7 @@ export default function StudentOverview({
             <span>Lessons</span>
             <span>Pace</span>
             <span>Due assignments</span>
-            <span>Reason</span>
+            <span>Summary</span>
           </div>
 
           {visibleStudents.length === 0 ? (
