@@ -23,6 +23,16 @@ export default function StudentDetail({
   const attemptedQuizzes = student.quizzes.filter(
     (quiz) => quiz.latestScore !== undefined,
   );
+  const assignmentAverage = average(
+    dueAssignments.flatMap((assignment) =>
+      assignment.score === undefined ? [] : [assignment.score],
+    ),
+  );
+  const quizAverage = average(
+    attemptedQuizzes.flatMap((quiz) =>
+      quiz.latestScore === undefined ? [] : [quiz.latestScore],
+    ),
+  );
   const summaryTitle = student.isDoingWell
     ? "Doing well"
     : student.attentionLevel === "high"
@@ -89,7 +99,10 @@ export default function StudentDetail({
       </section>
 
       <section className="detail-section">
-        <h3>Past-due assignments</h3>
+        <div className="detail-section-heading">
+          <h3>Past-due assignments</h3>
+          <span>({averageLabel(assignmentAverage)})</span>
+        </div>
         <div className="detail-records">
           {dueAssignments.map((assignment) => (
             <div className="detail-record" key={assignment.id}>
@@ -118,7 +131,10 @@ export default function StudentDetail({
 
       <section className="detail-section detail-split">
         <div>
-          <h3>Latest quiz results</h3>
+          <div className="detail-section-heading">
+            <h3>Quiz results</h3>
+            <span>({averageLabel(quizAverage)})</span>
+          </div>
           {attemptedQuizzes.length ? (
             <div className="quiz-list">
               {attemptedQuizzes.map((quiz) => (
@@ -174,4 +190,13 @@ function activityLabel(student: StudentInsight) {
   if (student.daysSinceActive === 0) return "Active today";
   if (student.daysSinceActive === 1) return "Active 1 day ago";
   return `Active ${student.daysSinceActive} days ago`;
+}
+
+function average(values: number[]) {
+  if (values.length === 0) return null;
+  return values.reduce((total, value) => total + value, 0) / values.length;
+}
+
+function averageLabel(value: number | null) {
+  return value === null ? "Avg. --%" : `Avg. ${Math.round(value)}%`;
 }

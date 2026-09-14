@@ -218,11 +218,6 @@ export function getStudentInsight(
   const attemptedQuizzes = quizzes.filter(
     (quiz) => quiz.latestScore !== undefined,
   );
-  const quizAverage = average(
-    attemptedQuizzes.flatMap((quiz) =>
-      quiz.latestScore === undefined ? [] : [quiz.latestScore],
-    ),
-  );
   const scoredDueAssignments = dueAssignments.filter(
     (assignment) => assignment.score !== undefined,
   );
@@ -372,14 +367,6 @@ export function getStudentInsight(
 
   if (isDoingWell) {
     reasons.push("All due assignments received");
-    if (quizAverage !== null) {
-      reasons.push(`Average quiz score ${Math.round(quizAverage)}%`);
-    }
-    if (assignmentAverage !== null) {
-      reasons.push(
-        `Average due-assignment score ${Math.round(assignmentAverage)}%`,
-      );
-    }
   }
 
   return {
