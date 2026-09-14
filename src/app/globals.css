@@ -219,6 +219,22 @@ button {
   font-size: 11px;
 }
 
+.overview-metric small.metric-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.detail-dot {
+  width: 4px;
+  height: 4px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #9aa4ad;
+}
+
 .watch-list-counts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -279,7 +295,7 @@ button {
 
 .overview-bottom {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(250px, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: 1px solid var(--line-soft);
 }
 
@@ -291,13 +307,16 @@ button {
 }
 
 .overview-pace-title {
+  color: var(--muted);
   font-size: 12px;
+  font-weight: 600;
 }
 
 .pace-overview-group {
   display: grid;
+  width: min(100%, 360px);
   grid-template-columns: 1fr 1fr;
-  gap: 10px 28px;
+  gap: 10px 36px;
 }
 
 .pace-overview-column {
@@ -332,17 +351,12 @@ button {
 .overview-challenge {
   min-width: 0;
   border-left: 1px solid var(--line-soft);
-  box-shadow: inset 3px 0 0 var(--amber);
 }
 
 .overview-challenge .overview-metric {
   height: 100%;
   border: 0;
   padding: 17px 22px;
-}
-
-.overview-challenge .overview-metric > span {
-  color: var(--amber);
 }
 
 .pace-dot {
@@ -1162,8 +1176,15 @@ button {
 }
 
 .detail-record small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: var(--muted);
   font-size: 10px;
+}
+
+.record-score-arrow {
+  color: #87939d;
 }
 
 .detail-split {

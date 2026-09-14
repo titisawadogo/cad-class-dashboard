@@ -16,6 +16,7 @@ type StudentFilter =
   | "below"
   | "on-pace"
   | "ahead"
+  | "missing-submissions"
   | "missing"
   | "all";
 
@@ -74,6 +75,11 @@ export default function StudentOverview({
       count: summary.paceCounts["on-pace"],
     },
     { id: "ahead", label: "Above pace", count: summary.paceCounts.ahead },
+    {
+      id: "missing-submissions",
+      label: "Missing submissions",
+      count: summary.studentsMissingDueSubmissions,
+    },
     { id: "missing", label: "No data", count: summary.paceCounts.missing },
     { id: "all", label: "All", count: summary.totalStudents },
   ];
@@ -127,7 +133,7 @@ export default function StudentOverview({
           <div className="student-table-header">
             <span>Name</span>
             <span>Lessons</span>
-            <span>Compared with expected</span>
+            <span>Pace</span>
             <span>Due assignments</span>
             <span>Reason</span>
           </div>
@@ -194,6 +200,9 @@ function matchesFilter(student: StudentInsight, filter: StudentFilter) {
     );
   }
   if (filter === "doing-well") return student.isDoingWell;
+  if (filter === "missing-submissions") {
+    return student.missingDueAssignmentCount > 0;
+  }
   return student.paceStatus === filter;
 }
 

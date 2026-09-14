@@ -70,7 +70,7 @@ export default function StudentDetail({
             </dd>
           </div>
           <div>
-            <dt>Expected now</dt>
+            <dt>Expected</dt>
             <dd>{course.paceExpectation.lessonsCompleted} lessons</dd>
           </div>
           <div>
@@ -100,8 +100,15 @@ export default function StudentDetail({
               <div>
                 <strong>{assignment.title}</strong>
                 <small>
-                  {getAssignmentStatusLabel(assignment.status)}
-                  {assignment.score !== undefined ? `, ${assignment.score}%` : ""}
+                  <span>{getAssignmentStatusLabel(assignment.status)}</span>
+                  {assignment.score !== undefined && (
+                    <>
+                      <span className="record-score-arrow" aria-hidden="true">
+                        &rarr;
+                      </span>
+                      <span>{assignment.score}%</span>
+                    </>
+                  )}
                 </small>
               </div>
             </div>

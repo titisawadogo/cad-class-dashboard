@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type {
   ClassSummary,
   ModuleChallenge,
@@ -32,7 +33,18 @@ export default function ClassOverview({
         <OverviewMetric
           label="Due assignments"
           value={`${summary.dueWorkReceived} of ${summary.dueWorkTotal}`}
-          detail={`${summary.missingDueSubmissionCount} missing, ${summary.returnedDueSubmissionCount} returned for revision`}
+          detail={
+            <>
+              <span>
+                {summary.missingDueSubmissionCount} missing submissions across{" "}
+                {summary.studentsMissingDueSubmissions} students
+              </span>
+              <span className="detail-dot" aria-hidden="true" />
+              <span>
+                {summary.returnedDueSubmissionCount} returned for revision
+              </span>
+            </>
+          }
         />
         <WatchListMetric
           attentionCount={summary.attentionCount}
@@ -83,7 +95,17 @@ export default function ClassOverview({
             }
             detail={
               challengingModule && challengingModule.quizAverage !== null
-                ? `Latest quiz average ${Math.round(challengingModule.quizAverage)}%, ${challengingModule.helpRequestCount} help requests (from ${challengingModule.studentsRequestingHelp} students)`
+                ? <>
+                    <span>
+                      Latest quiz average{" "}
+                      {Math.round(challengingModule.quizAverage)}%
+                    </span>
+                    <span className="detail-dot" aria-hidden="true" />
+                    <span>
+                      {challengingModule.helpRequestCount} help requests from{" "}
+                      {challengingModule.studentsRequestingHelp} students
+                    </span>
+                  </>
                 : moduleChallenge.status === "none"
                   ? "No module meets the criteria"
                   : "More quiz, help or due-work data is needed"
@@ -104,7 +126,7 @@ function OverviewMetric({
   compactValue?: boolean;
   label: string;
   value: string;
-  detail: string;
+  detail: ReactNode;
 }) {
   const classNames = [
     "overview-metric",
@@ -117,7 +139,7 @@ function OverviewMetric({
     <div className={classNames}>
       <span>{label}</span>
       <strong>{value}</strong>
-      <small>{detail}</small>
+      <small className="metric-detail">{detail}</small>
     </div>
   );
 }

@@ -16,6 +16,7 @@ const REPEATED_HELP_REQUESTS = 3;
 const ATTENTION_WEEKS_BEHIND = 2;
 const STALLED_DAYS = 20;
 const BELOW_CLASS_AVERAGE_BY = 15;
+const MIN_QUIZ_PEERS = 2;
 const MODULE_QUIZ_GAP = 10;
 const MODULE_HELP_SHARE = 0.25;
 const MODULE_MISSING_SHARE = 0.2;
@@ -70,6 +71,7 @@ export interface ClassSummary {
   attentionCount: number;
   doingWellCount: number;
   missingDueSubmissionCount: number;
+  studentsMissingDueSubmissions: number;
   returnedDueSubmissionCount: number;
   missingProgressCount: number;
   oneLessonBelowCount: number;
@@ -185,7 +187,7 @@ export function getStudentInsight(
   course: Course,
   student: StudentSummary,
   detail: StudentDetail,
-  classQuizAverage: number | null,
+  peerQuizAverages: Record<string, number | null>,
   classAssignmentAverage: number | null,
 ): StudentInsight {
   const lessonsCompleted = student.progress.lessonsCompleted;
@@ -245,17 +247,22 @@ export function getStudentInsight(
   const repeatedRecentHelp =
     recentHelpRequestCount !== null &&
     recentHelpRequestCount >= REPEATED_HELP_REQUESTS;
-  const lowQuizAverage =
-    attemptedQuizzes.length >= 2 &&
-    quizAverage !== null &&
-    classQuizAverage !== null &&
-    quizAverage <= classQuizAverage - BELOW_CLASS_AVERAGE_BY;
+  const belowAverageQuizCount = attemptedQuizzes.filter((quiz) => {
+    const peerAverage = peerQuizAverages[quiz.id];
+
+    return (
+      quiz.latestScore !== undefined &&
+      peerAverage !== null &&
+      quiz.latestScore <= peerAverage - BELOW_CLASS_AVERAGE_BY
+    );
+  }).length;
+  const lowQuizResults = belowAverageQuizCount >= 2;
   const lowAssignmentAverage =
     scoredDueAssignments.length >= 2 &&
     assignmentAverage !== null &&
     classAssignmentAverage !== null &&
     assignmentAverage <= classAssignmentAverage - BELOW_CLASS_AVERAGE_BY;
-  const lowAcademicResults = lowQuizAverage || lowAssignmentAverage;
+  const lowAcademicResults = lowQuizResults || lowAssignmentAverage;
 
   const academicProblemCount = [
     farBelowExpected,
@@ -279,10 +286,7 @@ export function getStudentInsight(
 
   const hasEnoughScoredWork =
     attemptedQuizzes.length + scoredDueAssignments.length >= 2;
-  const quizResultsAreAcceptable =
-    quizAverage === null ||
-    classQuizAverage === null ||
-    quizAverage > classQuizAverage - BELOW_CLASS_AVERAGE_BY;
+  const quizResultsAreAcceptable = !lowQuizResults;
   const assignmentResultsAreAcceptable =
     assignmentAverage === null ||
     classAssignmentAverage === null ||
@@ -304,7 +308,9 @@ export function getStudentInsight(
 
   if (farBelowExpected && paceDifference !== null) {
     const difference = Math.abs(paceDifference);
-    reasons.push(`${difference} lessons below expected`);
+    reasons.push(
+      `${difference} ${difference === 1 ? "lesson" : "lessons"} behind`,
+    );
   }
 
   if (missingDueAssignments.length > 0) {
@@ -315,10 +321,8 @@ export function getStudentInsight(
     );
   }
 
-  if (lowQuizAverage && quizAverage !== null && classQuizAverage !== null) {
-    reasons.push(
-      `Latest quiz average ${Math.round(quizAverage)}%, class average ${Math.round(classQuizAverage)}%`,
-    );
+  if (lowQuizResults) {
+    reasons.push("Quiz scores below average");
   }
 
   if (
@@ -326,9 +330,7 @@ export function getStudentInsight(
     assignmentAverage !== null &&
     classAssignmentAverage !== null
   ) {
-    reasons.push(
-      `Assignment average ${Math.round(assignmentAverage)}%, class average ${Math.round(classAssignmentAverage)}%`,
-    );
+    reasons.push("Due-assignment scores below average");
   }
 
   if (returnedDueAssignments.length > 0) {
@@ -357,24 +359,26 @@ export function getStudentInsight(
     if (!farBelowExpected) {
       const difference = Math.abs(paceDifference);
       reasons.push(
-        `${difference} ${difference === 1 ? "lesson" : "lessons"} below expected`,
+        `${difference} ${difference === 1 ? "lesson" : "lessons"} behind`,
       );
     }
   } else if (paceDifference > 0) {
     reasons.push(
-      `${paceDifference} ${paceDifference === 1 ? "lesson" : "lessons"} above expected`,
+      `${paceDifference} ${paceDifference === 1 ? "lesson" : "lessons"} ahead`,
     );
   } else {
-    reasons.push("Matches expected progress");
+    reasons.push("At expected pace");
   }
 
   if (isDoingWell) {
     reasons.push("All due assignments received");
     if (quizAverage !== null) {
-      reasons.push(`Latest quiz average ${Math.round(quizAverage)}%`);
+      reasons.push(`Average quiz score ${Math.round(quizAverage)}%`);
     }
     if (assignmentAverage !== null) {
-      reasons.push(`Assignment average ${Math.round(assignmentAverage)}%`);
+      reasons.push(
+        `Average due-assignment score ${Math.round(assignmentAverage)}%`,
+      );
     }
   }
 
@@ -408,12 +412,17 @@ export function getStudentInsights(data: DashboardData) {
     unknown: 3,
   };
 
-  const latestQuizScores = Object.values(data.studentDetails).flatMap(
-    (detail) =>
-      data.course.quizzes.flatMap((quiz) => {
+  const quizScoresById: Record<
+    string,
+    Array<{ studentId: string; score: number }>
+  > = Object.fromEntries(
+    data.course.quizzes.map((quiz) => [
+      quiz.id,
+      Object.entries(data.studentDetails).flatMap(([studentId, detail]) => {
         const score = detail.quizAttempts[quiz.id]?.at(-1);
-        return typeof score === "number" ? [score] : [];
+        return typeof score === "number" ? [{ studentId, score }] : [];
       }),
+    ]),
   );
   const dueAssignmentScores = data.studentSummaries.flatMap((student) =>
     getAssignmentRows(data.course, data.studentDetails[student.id]).flatMap(
@@ -423,19 +432,34 @@ export function getStudentInsights(data: DashboardData) {
           : [],
     ),
   );
-  const classQuizAverage = average(latestQuizScores);
   const classAssignmentAverage = average(dueAssignmentScores);
 
   return data.studentSummaries
-    .map((student) =>
-      getStudentInsight(
+    .map((student) => {
+      const peerQuizAverages: Record<string, number | null> =
+        Object.fromEntries(
+          data.course.quizzes.map((quiz) => {
+            const peerScores = quizScoresById[quiz.id]
+              .filter((result) => result.studentId !== student.id)
+              .map((result) => result.score);
+
+            return [
+              quiz.id,
+              peerScores.length >= MIN_QUIZ_PEERS
+                ? average(peerScores)
+                : null,
+            ];
+          }),
+        );
+
+      return getStudentInsight(
         data.course,
         student,
         data.studentDetails[student.id],
-        classQuizAverage,
+        peerQuizAverages,
         classAssignmentAverage,
-      ),
-    )
+      );
+    })
     .sort((first, second) => {
       const attentionDifference =
         attentionOrder[first.attentionLevel] -
@@ -507,6 +531,9 @@ export function getClassSummary(
       (total, student) => total + student.missingDueAssignmentCount,
       0,
     ),
+    studentsMissingDueSubmissions: students.filter(
+      (student) => student.missingDueAssignmentCount > 0,
+    ).length,
     returnedDueSubmissionCount: students.reduce(
       (total, student) => total + student.returnedDueAssignmentCount,
       0,
@@ -704,10 +731,10 @@ export function getPaceLabel(status: PaceStatus) {
 
 export function getPaceDifferenceLabel(student: StudentInsight) {
   if (student.paceDifference === null) return "Not available";
-  if (student.paceDifference === 0) return "Matches 12 lessons";
+  if (student.paceDifference === 0) return "At expected pace";
 
   const difference = Math.abs(student.paceDifference);
-  const direction = student.paceDifference > 0 ? "above" : "below";
+  const direction = student.paceDifference > 0 ? "ahead" : "behind";
   return `${difference} ${difference === 1 ? "lesson" : "lessons"} ${direction}`;
 }
 
