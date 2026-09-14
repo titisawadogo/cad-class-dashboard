@@ -1,0 +1,2728 @@
+{
+  "course": {
+    "courseId": "me102-2026su-b",
+    "code": "ME 102",
+    "title": "Introduction to Design Engineering",
+    "section": "Section B — Summer 2026",
+    "instructor": "Dr. Rivera",
+    "lmsPlatform": "Canvas",
+    "startDate": "2026-05-04",
+    "endDate": "2026-07-24",
+    "weeksElapsed": 6,
+    "lessonsTotal": 24,
+    "modules": [
+      {
+        "moduleId": "m1",
+        "title": "Sketching basics",
+        "lessons": 3
+      },
+      {
+        "moduleId": "m2",
+        "title": "Parametric modeling",
+        "lessons": 3
+      },
+      {
+        "moduleId": "m3",
+        "title": "Design intent",
+        "lessons": 3
+      },
+      {
+        "moduleId": "m4",
+        "title": "Assemblies",
+        "lessons": 3
+      },
+      {
+        "moduleId": "m5",
+        "title": "Surfaces basics",
+        "lessons": 3
+      },
+      {
+        "moduleId": "m6",
+        "title": "Simulation & load paths",
+        "lessons": 3
+      },
+      {
+        "moduleId": "m7",
+        "title": "Sheet metal & DFM",
+        "lessons": 3
+      },
+      {
+        "moduleId": "m8",
+        "title": "Drawings",
+        "lessons": 3
+      }
+    ],
+    "assignments": [
+      {
+        "id": "a1",
+        "title": "Parametric Bracket",
+        "moduleId": "m2",
+        "dueAt": "2026-05-15T23:59:00Z",
+        "pointsPossible": 100
+      },
+      {
+        "id": "a2",
+        "title": "Design Intent Study",
+        "moduleId": "m3",
+        "dueAt": "2026-05-22T23:59:00Z",
+        "pointsPossible": 100
+      },
+      {
+        "id": "a3",
+        "title": "Assembly & Joints",
+        "moduleId": "m4",
+        "dueAt": "2026-06-05T23:59:00Z",
+        "pointsPossible": 100
+      },
+      {
+        "id": "a4",
+        "title": "Surface Form Study",
+        "moduleId": "m5",
+        "dueAt": "2026-06-19T23:59:00Z",
+        "pointsPossible": 100
+      },
+      {
+        "id": "a5",
+        "title": "Simulation Report",
+        "moduleId": "m6",
+        "dueAt": "2026-07-03T23:59:00Z",
+        "pointsPossible": 100
+      }
+    ],
+    "quizzes": [
+      {
+        "id": "q1",
+        "title": "Sketch logic",
+        "moduleId": "m1"
+      },
+      {
+        "id": "q2",
+        "title": "Parametric relationships",
+        "moduleId": "m2"
+      },
+      {
+        "id": "q3",
+        "title": "Joints & degrees of freedom",
+        "moduleId": "m4"
+      },
+      {
+        "id": "q4",
+        "title": "Loads & load paths",
+        "moduleId": "m6"
+      }
+    ],
+    "snapshotAt": "2026-06-15T09:00:00Z",
+    "paceExpectation": {
+      "byCompletedWeek": 6,
+      "lessonsCompleted": 12,
+      "lessonsPerCompletedWeek": 2
+    }
+  },
+  "studentSummaries": [
+    {
+      "id": "stu-01",
+      "name": "Priya Nair",
+      "progress": {
+        "lessonsCompleted": 8,
+        "currentModule": "Design intent",
+        "currentLesson": "3.3 Editing without breaking",
+        "currentLessonSince": "2026-06-12"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-20T19:12:00Z",
+          "score": 78
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-06-06T19:31:00Z",
+          "score": 70
+        },
+        {
+          "id": "a3",
+          "status": "not_started"
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-12T00:28:00Z"
+    },
+    {
+      "id": "stu-02",
+      "name": "Lena Kowalski",
+      "progress": {
+        "lessonsCompleted": 5,
+        "currentModule": "Parametric modeling",
+        "currentLesson": "2.3 Timeline & feature order",
+        "currentLessonSince": "2026-05-13"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-17T17:50:00Z",
+          "score": 54
+        },
+        {
+          "id": "a2",
+          "status": "not_started"
+        },
+        {
+          "id": "a3",
+          "status": "not_started"
+        },
+        {
+          "id": "a4",
+          "status": "not_started"
+        }
+      ],
+      "lastActiveAt": "2026-06-11T02:28:00Z"
+    },
+    {
+      "id": "stu-03",
+      "name": "Marco Rossi",
+      "progress": {
+        "lessonsCompleted": 20,
+        "currentModule": "Sheet metal & DFM",
+        "currentLesson": "7.3 Manufacturing constraints",
+        "currentLessonSince": "2026-06-13"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-12T11:03:00Z",
+          "score": 72
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-19T02:13:00Z",
+          "score": 72
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-04T22:28:00Z",
+          "score": 71
+        },
+        {
+          "id": "a4",
+          "status": "submitted",
+          "submittedAt": "2026-06-13T05:17:00Z"
+        }
+      ],
+      "lastActiveAt": "2026-06-13T01:15:00Z"
+    },
+    {
+      "id": "stu-04",
+      "name": "Sam Whitfield",
+      "progress": {
+        "lessonsCompleted": 18,
+        "currentModule": "Sheet metal & DFM",
+        "currentLesson": "7.1 Flanges & bend radii",
+        "currentLessonSince": "2026-06-11"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-15T19:54:00Z",
+          "score": 95
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-19T10:47:00Z",
+          "score": 86
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-04T09:13:00Z",
+          "score": 90
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-11T16:25:00Z"
+    },
+    {
+      "id": "stu-05",
+      "name": "Yuki Tanaka",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-04"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-14T22:39:00Z",
+          "score": 85
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-21T11:21:00Z",
+          "score": 77
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-05T01:36:00Z",
+          "score": 80
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-14T20:08:00Z"
+    },
+    {
+      "id": "stu-06",
+      "name": "Dev Sharma",
+      "progress": {
+        "lessonsCompleted": 0,
+        "currentModule": "Sketching basics",
+        "currentLesson": "1.1 Sketch planes & origins",
+        "currentLessonSince": "2026-05-06"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "not_started"
+        },
+        {
+          "id": "a2",
+          "status": "not_started"
+        },
+        {
+          "id": "a3",
+          "status": "not_started"
+        },
+        {
+          "id": "a4",
+          "status": "not_started"
+        }
+      ],
+      "lastActiveAt": "2026-05-06T10:11:00Z"
+    },
+    {
+      "id": "stu-07",
+      "name": "Amara Okafor",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-04"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-12T21:59:00Z",
+          "score": 82
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-24T01:25:00Z",
+          "score": 83
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-03T12:15:00Z",
+          "score": 73
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-11T17:59:00Z"
+    },
+    {
+      "id": "stu-08",
+      "name": "Ravi Patel",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-03"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-15T00:26:00Z",
+          "score": 84
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-22T21:15:00Z",
+          "score": 83
+        },
+        {
+          "id": "a3",
+          "status": "submitted",
+          "submittedAt": "2026-06-05T12:37:00Z"
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-10T16:09:00Z"
+    },
+    {
+      "id": "stu-09",
+      "name": "Zara Ahmed",
+      "progress": {
+        "lessonsCompleted": 17,
+        "currentModule": "Simulation & load paths",
+        "currentLesson": "6.3 Reading results",
+        "currentLessonSince": "2026-06-13"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-12T17:46:00Z",
+          "score": 91
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-20T23:34:00Z",
+          "score": 87
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-04T22:32:00Z",
+          "score": 90
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-13T10:57:00Z"
+    },
+    {
+      "id": "stu-10",
+      "name": "Tobias Berg",
+      "progress": {
+        "lessonsCompleted": 7,
+        "currentModule": "Design intent",
+        "currentLesson": "3.2 Parametric families",
+        "currentLessonSince": "2026-05-28"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-16T18:27:00Z",
+          "score": 66
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-30T07:05:00Z",
+          "score": 55
+        },
+        {
+          "id": "a3",
+          "status": "not_started"
+        },
+        {
+          "id": "a4",
+          "status": "not_started"
+        }
+      ],
+      "lastActiveAt": "2026-06-09T19:13:00Z"
+    },
+    {
+      "id": "stu-11",
+      "name": "Nadia Haddad",
+      "progress": {
+        "lessonsCompleted": 10,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.2 As-built vs assembled",
+        "currentLessonSince": "2026-06-04"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-15T22:06:00Z",
+          "score": 83
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-27T20:54:00Z",
+          "score": 84
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-05T22:56:00Z",
+          "score": 72
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-14T18:59:00Z"
+    },
+    {
+      "id": "stu-12",
+      "name": "Felix Muller",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-05"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-14T03:05:00Z",
+          "score": 85
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-22T10:40:00Z",
+          "score": 83
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-04T14:40:00Z",
+          "score": 77
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-12T14:47:00Z"
+    },
+    {
+      "id": "stu-13",
+      "name": "Saoirse O'Brien",
+      "progress": {
+        "lessonsCompleted": 19,
+        "currentModule": "Sheet metal & DFM",
+        "currentLesson": "7.2 Wall thickness & draft",
+        "currentLessonSince": "2026-06-12"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-14T10:46:00Z",
+          "score": 89
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-21T04:58:00Z",
+          "score": 90
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-05T22:12:00Z",
+          "score": 91
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-12T02:32:00Z"
+    },
+    {
+      "id": "stu-14",
+      "name": "Kwame Mensah",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-02"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-13T14:32:00Z",
+          "score": 87
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-21T21:21:00Z",
+          "score": 83
+        },
+        {
+          "id": "a3",
+          "status": "returned",
+          "submittedAt": "2026-06-02T16:39:00Z",
+          "score": 59
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-12T18:40:00Z"
+    },
+    {
+      "id": "stu-15",
+      "name": "Ingrid Larsson",
+      "progress": {},
+      "telemetryAvailability": "unavailable",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-15T22:04:00Z",
+          "score": 88
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-19T13:08:00Z",
+          "score": 80
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-03T17:09:00Z",
+          "score": 76
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ]
+    },
+    {
+      "id": "stu-16",
+      "name": "Chidi Eze",
+      "progress": {
+        "lessonsCompleted": 13,
+        "currentModule": "Surfaces basics",
+        "currentLesson": "5.2 Stitching to solid",
+        "currentLessonSince": "2026-06-08"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-12T22:06:00Z",
+          "score": 85
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-22T02:42:00Z",
+          "score": 86
+        },
+        {
+          "id": "a3",
+          "status": "submitted",
+          "submittedAt": "2026-06-03T11:18:00Z"
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-12T11:32:00Z"
+    },
+    {
+      "id": "stu-17",
+      "name": "Mirela Popescu",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-04"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-12T10:04:00Z",
+          "score": 88
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-22T15:36:00Z",
+          "score": 80
+        },
+        {
+          "id": "a3",
+          "status": "returned",
+          "submittedAt": "2026-06-02T21:11:00Z",
+          "score": 59
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-09T19:00:00Z"
+    },
+    {
+      "id": "stu-18",
+      "name": "Arjun Mehta",
+      "progress": {
+        "lessonsCompleted": 4,
+        "currentModule": "Parametric modeling",
+        "currentLesson": "2.2 User parameters",
+        "currentLessonSince": "2026-05-14"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-15T01:18:00Z",
+          "score": 54
+        },
+        {
+          "id": "a2",
+          "status": "not_started"
+        },
+        {
+          "id": "a3",
+          "status": "not_started"
+        },
+        {
+          "id": "a4",
+          "status": "not_started"
+        }
+      ],
+      "lastActiveAt": "2026-06-09T07:16:00Z"
+    },
+    {
+      "id": "stu-19",
+      "name": "Sofia Ramirez",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-05"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-15T18:56:00Z",
+          "score": 83
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-23T16:10:00Z",
+          "score": 83
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-05T19:49:00Z",
+          "score": 72
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-09T23:42:00Z"
+    },
+    {
+      "id": "stu-20",
+      "name": "Henrik Nilsson",
+      "progress": {
+        "lessonsCompleted": 8,
+        "currentModule": "Design intent",
+        "currentLesson": "3.3 Editing without breaking",
+        "currentLessonSince": "2026-05-25"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-15T00:59:00Z",
+          "score": 91
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-22T19:48:00Z",
+          "score": 85
+        },
+        {
+          "id": "a3",
+          "status": "not_started"
+        },
+        {
+          "id": "a4",
+          "status": "not_started"
+        }
+      ],
+      "lastActiveAt": "2026-05-25T17:40:00Z"
+    },
+    {
+      "id": "stu-21",
+      "name": "Aaliya Khan",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-04"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-12T11:24:00Z",
+          "score": 81
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-23T03:01:00Z",
+          "score": 76
+        },
+        {
+          "id": "a3",
+          "status": "submitted",
+          "submittedAt": "2026-06-05T17:07:00Z"
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-13T16:57:00Z"
+    },
+    {
+      "id": "stu-22",
+      "name": "Emeka Nwosu",
+      "progress": {
+        "lessonsCompleted": 12,
+        "currentModule": "Surfaces basics",
+        "currentLesson": "5.1 Patch & loft surfaces",
+        "currentLessonSince": "2026-06-04"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-14T12:32:00Z",
+          "score": 87
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-26T21:19:00Z",
+          "score": 80
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-05T09:19:00Z",
+          "score": 73
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-14T20:32:00Z"
+    },
+    {
+      "id": "stu-23",
+      "name": "Linnea Sundqvist",
+      "progress": {
+        "lessonsCompleted": 11,
+        "currentModule": "Assemblies",
+        "currentLesson": "4.3 Joints & motion links",
+        "currentLessonSince": "2026-06-04"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-12T15:47:00Z",
+          "score": 84
+        },
+        {
+          "id": "a2",
+          "status": "graded",
+          "submittedAt": "2026-05-24T15:01:00Z",
+          "score": 84
+        },
+        {
+          "id": "a3",
+          "status": "graded",
+          "submittedAt": "2026-06-02T14:41:00Z",
+          "score": 69
+        },
+        {
+          "id": "a4",
+          "status": "in_progress"
+        }
+      ],
+      "lastActiveAt": "2026-06-11T08:07:00Z"
+    },
+    {
+      "id": "stu-24",
+      "name": "Darius Ionescu",
+      "progress": {
+        "lessonsCompleted": 4,
+        "currentModule": "Parametric modeling",
+        "currentLesson": "2.2 User parameters",
+        "currentLessonSince": "2026-05-15"
+      },
+      "telemetryAvailability": "available",
+      "assignments": [
+        {
+          "id": "a1",
+          "status": "graded",
+          "submittedAt": "2026-05-16T20:40:00Z",
+          "score": 57
+        },
+        {
+          "id": "a2",
+          "status": "not_started"
+        },
+        {
+          "id": "a3",
+          "status": "not_started"
+        },
+        {
+          "id": "a4",
+          "status": "not_started"
+        }
+      ],
+      "lastActiveAt": "2026-06-10T08:18:00Z"
+    }
+  ],
+  "studentDetails": {
+    "stu-01": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-05T01:42:00Z",
+          "lessonId": "1.2"
+        },
+        {
+          "raisedAt": "2026-05-26T22:24:00Z",
+          "lessonId": "2.3"
+        },
+        {
+          "raisedAt": "2026-06-11T18:32:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T00:50:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T00:53:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T00:56:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T00:57:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T00:58:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T00:59:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T01:00:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T01:01:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T01:06:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T01:07:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-12T01:08:00Z",
+          "lessonId": "3.2"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          49,
+          57,
+          64
+        ],
+        "q2": [
+          46,
+          48,
+          57
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-20T19:12:00Z",
+          "score": 78,
+          "similarity": 0.09
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-06T19:31:00Z",
+          "score": 70,
+          "similarity": 0.11,
+          "feedback": "Works under small edits and breaks under large ones — worth investigating why."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-12T01:21:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          4,
+          6,
+          7,
+          7,
+          7,
+          6
+        ],
+        "minutesByWeek": [
+          327,
+          377,
+          548,
+          402,
+          418,
+          367
+        ]
+      }
+    },
+    "stu-02": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-20T16:20:00Z",
+          "lessonId": "2.3"
+        },
+        {
+          "raisedAt": "2026-06-11T02:45:00Z",
+          "lessonId": "2.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          51
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-17T17:50:00Z",
+          "score": 54,
+          "similarity": 0.08,
+          "feedback": "Dimensions are missing in two sketches, so this cannot be driven from parameters."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "not_started"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        "minutesByWeek": [
+          107,
+          30,
+          26,
+          45,
+          0,
+          26
+        ]
+      }
+    },
+    "stu-03": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-13T01:33:00Z",
+          "lessonId": "7.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          48
+        ],
+        "q2": [
+          44
+        ],
+        "q3": [
+          39
+        ],
+        "q4": [
+          50
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-12T11:03:00Z",
+          "score": 72,
+          "similarity": 0.07
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-19T02:13:00Z",
+          "score": 72,
+          "similarity": 0.11,
+          "feedback": "Works under small edits and breaks under large ones — worth investigating why."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-04T22:28:00Z",
+          "score": 71,
+          "similarity": 0.29,
+          "feedback": "Motion works, but the joint origins are placed on faces rather than features."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "submitted",
+          "submittedAt": "2026-06-13T05:17:00Z",
+          "similarity": 0.08
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          6,
+          6,
+          6,
+          5,
+          5,
+          4
+        ],
+        "minutesByWeek": [
+          183,
+          178,
+          167,
+          147,
+          160,
+          159
+        ]
+      }
+    },
+    "stu-04": {
+      "helpRequests": [],
+      "quizAttempts": {
+        "q1": [
+          94
+        ],
+        "q2": [
+          90
+        ],
+        "q3": [
+          86
+        ],
+        "q4": [
+          90
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-15T19:54:00Z",
+          "score": 95,
+          "similarity": 0.06,
+          "feedback": "Clean sketch history and named parameters — easy to follow."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-19T10:47:00Z",
+          "score": 86,
+          "similarity": 0.14,
+          "feedback": "Strong write-up. Timeline order matches the stated intent."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-04T09:13:00Z",
+          "score": 90,
+          "similarity": 0.26,
+          "feedback": "Clean assembly. The motion study needed no fixing to run."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-11T17:06:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          4,
+          6,
+          4,
+          5,
+          5
+        ],
+        "minutesByWeek": [
+          119,
+          199,
+          265,
+          210,
+          273,
+          219
+        ]
+      }
+    },
+    "stu-05": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-19T19:04:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-05T17:52:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-14T20:28:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          77,
+          80
+        ],
+        "q2": [
+          72,
+          77
+        ],
+        "q3": [
+          34,
+          46,
+          51
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-14T22:39:00Z",
+          "score": 85,
+          "similarity": 0.13,
+          "feedback": "Sketch planes are well chosen; the whole thing is easy to edit."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-21T11:21:00Z",
+          "score": 77,
+          "similarity": 0.18,
+          "feedback": "Works under small edits and breaks under large ones — worth investigating why."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 2,
+          "status": "graded",
+          "submittedAt": "2026-06-05T01:36:00Z",
+          "score": 80,
+          "similarity": 0.27,
+          "feedback": "Right idea on joints, though one is a slider where it should be a revolute."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-14T20:57:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          5,
+          5,
+          3,
+          5,
+          6,
+          6
+        ],
+        "minutesByWeek": [
+          257,
+          278,
+          181,
+          285,
+          310,
+          350
+        ]
+      }
+    },
+    "stu-06": {
+      "helpRequests": [],
+      "quizAttempts": {},
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "not_started"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "minutesByWeek": [
+          15,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "stu-07": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-06T21:02:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-11T18:50:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          73,
+          85
+        ],
+        "q2": [
+          76,
+          80
+        ],
+        "q3": [
+          30,
+          49,
+          52
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-12T21:59:00Z",
+          "score": 82,
+          "similarity": 0.05,
+          "feedback": "Fully constrained throughout. Good parameter naming."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-24T01:25:00Z",
+          "score": 83,
+          "similarity": 0.13,
+          "feedback": "Design intent is explicit and the model survives the parameter changes."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-03T12:15:00Z",
+          "score": 73,
+          "similarity": 0.32,
+          "feedback": "Assembly holds together; the motion range is narrower than the brief asks for."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-11T19:34:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          3,
+          4,
+          5,
+          5,
+          3
+        ],
+        "minutesByWeek": [
+          164,
+          168,
+          236,
+          292,
+          296,
+          217
+        ]
+      }
+    },
+    "stu-08": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-08T18:44:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          75,
+          82
+        ],
+        "q2": [
+          75,
+          83
+        ],
+        "q3": [
+          27,
+          44,
+          42
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-15T00:26:00Z",
+          "score": 84,
+          "similarity": 0.18,
+          "feedback": "Clean sketch history and named parameters — easy to follow."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-22T21:15:00Z",
+          "score": 83,
+          "similarity": 0.17,
+          "feedback": "Strong write-up. Timeline order matches the stated intent."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "submitted",
+          "submittedAt": "2026-06-05T12:37:00Z",
+          "similarity": 0.22
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-10T16:35:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          4,
+          5,
+          5,
+          5,
+          6,
+          5
+        ],
+        "minutesByWeek": [
+          146,
+          253,
+          203,
+          215,
+          303,
+          180
+        ]
+      }
+    },
+    "stu-09": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-13T11:28:00Z",
+          "lessonId": "6.2"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          89
+        ],
+        "q2": [
+          90
+        ],
+        "q3": [
+          85
+        ],
+        "q4": [
+          85
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-12T17:46:00Z",
+          "score": 91,
+          "similarity": 0.18,
+          "feedback": "Sketch planes are well chosen; the whole thing is easy to edit."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-20T23:34:00Z",
+          "score": 87,
+          "similarity": 0.15,
+          "feedback": "You said what you meant to control and then actually controlled it. Good."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-04T22:32:00Z",
+          "score": 90,
+          "similarity": 0.27,
+          "feedback": "Good joint selection — revolute where it matters, rigid where it does not."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-13T11:45:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          3,
+          5,
+          2,
+          4,
+          3
+        ],
+        "minutesByWeek": [
+          131,
+          145,
+          238,
+          104,
+          196,
+          144
+        ]
+      }
+    },
+    "stu-10": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-20T04:37:00Z",
+          "lessonId": "2.2"
+        },
+        {
+          "raisedAt": "2026-06-03T00:03:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-09T19:29:00Z",
+          "lessonId": "3.2"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          51,
+          63
+        ],
+        "q2": [
+          48,
+          55
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-16T18:27:00Z",
+          "score": 66,
+          "similarity": 0.14,
+          "feedback": "Hard-coded values throughout — revisit user parameters before the next brief."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-30T07:05:00Z",
+          "score": 55,
+          "similarity": 0.05,
+          "feedback": "Rationale is missing, so it is hard to tell which decisions were deliberate."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "not_started"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          2,
+          2,
+          3,
+          2,
+          1,
+          1
+        ],
+        "minutesByWeek": [
+          79,
+          78,
+          111,
+          109,
+          47,
+          41
+        ]
+      }
+    },
+    "stu-11": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-22T21:46:00Z",
+          "lessonId": "3.1"
+        },
+        {
+          "raisedAt": "2026-06-09T18:07:00Z",
+          "lessonId": "4.2"
+        },
+        {
+          "raisedAt": "2026-06-12T11:17:00Z",
+          "lessonId": "4.2"
+        },
+        {
+          "raisedAt": "2026-06-14T19:23:00Z",
+          "lessonId": "4.2"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          69,
+          86
+        ],
+        "q2": [
+          74,
+          82
+        ],
+        "q3": [
+          23,
+          31,
+          42
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-15T22:06:00Z",
+          "score": 83,
+          "similarity": 0.14,
+          "feedback": "Good work. Symmetry constraints are doing real work here."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-27T20:54:00Z",
+          "score": 84,
+          "similarity": 0.07,
+          "feedback": "Clear reasoning, and the model behaves exactly as your notes predict."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-05T22:56:00Z",
+          "score": 72,
+          "similarity": 0.28,
+          "feedback": "Components are placed correctly but two joints are over-constrained."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-14T19:39:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          4,
+          3,
+          5,
+          4,
+          4
+        ],
+        "minutesByWeek": [
+          159,
+          202,
+          227,
+          306,
+          231,
+          201
+        ]
+      }
+    },
+    "stu-12": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-07T06:16:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-12T15:19:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          78,
+          86
+        ],
+        "q2": [
+          73,
+          81
+        ],
+        "q3": [
+          36,
+          34,
+          40
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-14T03:05:00Z",
+          "score": 85,
+          "similarity": 0.07,
+          "feedback": "Tidy model, sensible origin placement, no stray geometry."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-22T10:40:00Z",
+          "score": 83,
+          "similarity": 0.1,
+          "feedback": "Excellent — the parameter table reads like documentation."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 2,
+          "status": "graded",
+          "submittedAt": "2026-06-04T14:40:00Z",
+          "score": 77,
+          "similarity": 0.32
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-12T15:35:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          5,
+          3,
+          5,
+          5,
+          3
+        ],
+        "minutesByWeek": [
+          133,
+          206,
+          134,
+          213,
+          250,
+          141
+        ]
+      }
+    },
+    "stu-13": {
+      "helpRequests": [],
+      "quizAttempts": {
+        "q1": [
+          85
+        ],
+        "q2": [
+          88
+        ],
+        "q3": [
+          85
+        ],
+        "q4": [
+          89
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-14T10:46:00Z",
+          "score": 89,
+          "similarity": 0.18,
+          "feedback": "Nicely disciplined feature tree. The bracket rebuilds without complaint."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-21T04:58:00Z",
+          "score": 90,
+          "similarity": 0.14,
+          "feedback": "Clear reasoning, and the model behaves exactly as your notes predict."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-05T22:12:00Z",
+          "score": 91,
+          "similarity": 0.3,
+          "feedback": "The mechanism moves exactly as the brief describes. Well done."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-12T03:08:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          4,
+          4,
+          3,
+          4,
+          3,
+          4
+        ],
+        "minutesByWeek": [
+          181,
+          176,
+          129,
+          220,
+          121,
+          180
+        ]
+      }
+    },
+    "stu-14": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-21T13:08:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-03T19:04:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-12T19:06:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          74,
+          79
+        ],
+        "q2": [
+          71,
+          81
+        ],
+        "q3": [
+          43,
+          31,
+          55
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-13T14:32:00Z",
+          "score": 87,
+          "similarity": 0.15,
+          "feedback": "Sketch planes are well chosen; the whole thing is easy to edit."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-21T21:21:00Z",
+          "score": 83,
+          "similarity": 0.14,
+          "feedback": "Excellent — the parameter table reads like documentation."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "returned",
+          "submittedAt": "2026-06-02T16:39:00Z",
+          "score": 59,
+          "similarity": 0.23,
+          "feedback": "Rigid group used where a joint is needed, so nothing actually moves."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-12T19:29:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          6,
+          4,
+          6,
+          7,
+          5
+        ],
+        "minutesByWeek": [
+          128,
+          319,
+          234,
+          346,
+          350,
+          284
+        ]
+      }
+    },
+    "stu-15": {
+      "helpRequests": null,
+      "quizAttempts": {
+        "q1": [
+          81,
+          87
+        ],
+        "q2": [
+          70,
+          83
+        ],
+        "q3": [
+          72,
+          73
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-15T22:04:00Z",
+          "score": 88,
+          "similarity": 0.1
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-19T13:08:00Z",
+          "score": 80,
+          "similarity": 0.15,
+          "feedback": "Good start; the rationale section is thinner than the model deserves."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-03T17:09:00Z",
+          "score": 76,
+          "similarity": 0.2,
+          "feedback": "Assembles cleanly. Two components are grounded that should be free to move."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-12T09:00:00Z"
+        }
+      ],
+      "activity": {
+        "availability": "unavailable"
+      }
+    },
+    "stu-16": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-12T12:08:00Z",
+          "lessonId": "5.2"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          68,
+          85
+        ],
+        "q2": [
+          68,
+          79
+        ],
+        "q3": [
+          71,
+          76
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-12T22:06:00Z",
+          "score": 85,
+          "similarity": 0.08,
+          "feedback": "Sketch planes are well chosen; the whole thing is easy to edit."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-22T02:42:00Z",
+          "score": 86,
+          "similarity": 0.11,
+          "feedback": "You said what you meant to control and then actually controlled it. Good."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "submitted",
+          "submittedAt": "2026-06-03T11:18:00Z",
+          "similarity": 0.55
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-12T12:26:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          5,
+          2,
+          4,
+          2,
+          2
+        ],
+        "minutesByWeek": [
+          221,
+          260,
+          124,
+          226,
+          163,
+          111
+        ]
+      }
+    },
+    "stu-17": {
+      "helpRequests": [],
+      "quizAttempts": {
+        "q1": [
+          69,
+          87
+        ],
+        "q2": [
+          70,
+          81
+        ],
+        "q3": [
+          28,
+          41,
+          41
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-12T10:04:00Z",
+          "score": 88,
+          "similarity": 0.11,
+          "feedback": "Good work. Symmetry constraints are doing real work here."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-22T15:36:00Z",
+          "score": 80,
+          "similarity": 0.16,
+          "feedback": "Decent. Some parameters are declared but never referenced."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "returned",
+          "submittedAt": "2026-06-02T21:11:00Z",
+          "score": 59,
+          "similarity": 0.31,
+          "feedback": "Degrees of freedom are not resolved and the assembly locks up."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-09T20:01:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          4,
+          2,
+          4,
+          4,
+          1
+        ],
+        "minutesByWeek": [
+          165,
+          200,
+          117,
+          207,
+          189,
+          63
+        ]
+      }
+    },
+    "stu-18": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-28T20:55:00Z",
+          "lessonId": "2.2"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          55
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-15T01:18:00Z",
+          "score": 54,
+          "similarity": 0.06
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "not_started"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          1,
+          3,
+          2,
+          1,
+          0,
+          1
+        ],
+        "minutesByWeek": [
+          73,
+          67,
+          48,
+          20,
+          0,
+          30
+        ]
+      }
+    },
+    "stu-19": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-07T10:50:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-10T00:09:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          77,
+          86
+        ],
+        "q2": [
+          69,
+          79
+        ],
+        "q3": [
+          23,
+          42,
+          41
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-15T18:56:00Z",
+          "score": 83,
+          "similarity": 0.1,
+          "feedback": "Good work. Symmetry constraints are doing real work here."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-23T16:10:00Z",
+          "score": 83,
+          "similarity": 0.18,
+          "feedback": "Clear reasoning, and the model behaves exactly as your notes predict."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-05T19:49:00Z",
+          "score": 72,
+          "similarity": 0.48,
+          "feedback": "Components are placed correctly but two joints are over-constrained."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-10T00:25:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          3,
+          2,
+          4,
+          4,
+          3
+        ],
+        "minutesByWeek": [
+          166,
+          165,
+          92,
+          285,
+          207,
+          170
+        ]
+      }
+    },
+    "stu-20": {
+      "helpRequests": [],
+      "quizAttempts": {
+        "q1": [
+          90
+        ],
+        "q2": [
+          91
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-15T00:59:00Z",
+          "score": 91,
+          "similarity": 0.09,
+          "feedback": "Nicely disciplined feature tree. The bracket rebuilds without complaint."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-22T19:48:00Z",
+          "score": 85,
+          "similarity": 0.17
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "not_started"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          4,
+          4,
+          4,
+          1,
+          0,
+          0
+        ],
+        "minutesByWeek": [
+          231,
+          227,
+          211,
+          53,
+          0,
+          0
+        ]
+      }
+    },
+    "stu-21": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-22T14:19:00Z",
+          "lessonId": "3.2"
+        },
+        {
+          "raisedAt": "2026-06-06T08:11:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-08T15:16:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-08T20:23:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-13T17:17:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          71,
+          83
+        ],
+        "q2": [
+          74,
+          78
+        ],
+        "q3": [
+          37,
+          39,
+          42
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-12T11:24:00Z",
+          "score": 81,
+          "similarity": 0.05,
+          "feedback": "Solid bracket. Some dimensions are hard-coded where a parameter would serve better."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-23T03:01:00Z",
+          "score": 76,
+          "similarity": 0.19
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "submitted",
+          "submittedAt": "2026-06-05T17:07:00Z",
+          "similarity": 0.52
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-13T17:48:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "minutesByWeek": [
+          128,
+          118,
+          221,
+          148,
+          242,
+          294
+        ]
+      }
+    },
+    "stu-22": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-11T19:23:00Z",
+          "lessonId": "5.1"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          74,
+          81
+        ],
+        "q2": [
+          73,
+          78
+        ],
+        "q3": [
+          27,
+          34,
+          54
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-14T12:32:00Z",
+          "score": 87,
+          "similarity": 0.15,
+          "feedback": "Good work. Symmetry constraints are doing real work here."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-26T21:19:00Z",
+          "score": 80,
+          "similarity": 0.17,
+          "feedback": "Good start; the rationale section is thinner than the model deserves."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-05T09:19:00Z",
+          "score": 73,
+          "similarity": 0.44
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-14T21:15:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          2,
+          3,
+          2,
+          5,
+          4,
+          5
+        ],
+        "minutesByWeek": [
+          76,
+          167,
+          95,
+          214,
+          198,
+          262
+        ]
+      }
+    },
+    "stu-23": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-06-06T22:23:00Z",
+          "lessonId": "4.3"
+        },
+        {
+          "raisedAt": "2026-06-11T08:46:00Z",
+          "lessonId": "4.3"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          72,
+          79
+        ],
+        "q2": [
+          71,
+          80
+        ],
+        "q3": [
+          25,
+          37,
+          44
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-12T15:47:00Z",
+          "score": 84,
+          "similarity": 0.05,
+          "feedback": "Fully constrained throughout. Good parameter naming."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-24T15:01:00Z",
+          "score": 84,
+          "similarity": 0.07,
+          "feedback": "Excellent — the parameter table reads like documentation."
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-06-02T14:41:00Z",
+          "score": 69,
+          "similarity": 0.41,
+          "feedback": "Right idea on joints, though one is a slider where it should be a revolute."
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "in_progress",
+          "lastSavedAt": "2026-06-11T09:20:00Z"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          4,
+          4,
+          3,
+          5,
+          5,
+          3
+        ],
+        "minutesByWeek": [
+          171,
+          164,
+          143,
+          200,
+          241,
+          168
+        ]
+      }
+    },
+    "stu-24": {
+      "helpRequests": [
+        {
+          "raisedAt": "2026-05-27T02:29:00Z",
+          "lessonId": "2.2"
+        }
+      ],
+      "quizAttempts": {
+        "q1": [
+          51
+        ]
+      },
+      "submissions": [
+        {
+          "assignmentId": "a1",
+          "attempt": 1,
+          "status": "graded",
+          "submittedAt": "2026-05-16T20:40:00Z",
+          "score": 57,
+          "similarity": 0.12,
+          "feedback": "Sketch is under-constrained, so the model breaks when dimensions change."
+        },
+        {
+          "assignmentId": "a2",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a3",
+          "attempt": 1,
+          "status": "not_started"
+        },
+        {
+          "assignmentId": "a4",
+          "attempt": 1,
+          "status": "not_started"
+        }
+      ],
+      "activity": {
+        "sessionsByWeek": [
+          2,
+          3,
+          2,
+          2,
+          0,
+          1
+        ],
+        "minutesByWeek": [
+          72,
+          90,
+          72,
+          65,
+          0,
+          64
+        ]
+      }
+    }
+  }
+}
