@@ -17,6 +17,7 @@ const ATTENTION_WEEKS_BEHIND = 2;
 const STALLED_DAYS = 20;
 const BELOW_CLASS_AVERAGE_BY = 15;
 const MIN_QUIZ_PEERS = 2;
+const MIN_ASSIGNMENT_PEERS = 2;
 const MODULE_QUIZ_GAP = 10;
 const MODULE_HELP_SHARE = 0.25;
 const MODULE_MISSING_SHARE = 0.2;
@@ -188,7 +189,7 @@ export function getStudentInsight(
   student: StudentSummary,
   detail: StudentDetail,
   peerQuizAverages: Record<string, number | null>,
-  classAssignmentAverage: number | null,
+  peerAssignmentAverages: Record<string, number | null>,
 ): StudentInsight {
   const lessonsCompleted = student.progress.lessonsCompleted;
   const expectedLessons = course.paceExpectation.lessonsCompleted;
@@ -221,11 +222,6 @@ export function getStudentInsight(
   const scoredDueAssignments = dueAssignments.filter(
     (assignment) => assignment.score !== undefined,
   );
-  const assignmentAverage = average(
-    scoredDueAssignments.flatMap((assignment) =>
-      assignment.score === undefined ? [] : [assignment.score],
-    ),
-  );
 
   const farBehindBy =
     course.paceExpectation.lessonsPerCompletedWeek * ATTENTION_WEEKS_BEHIND;
@@ -252,12 +248,19 @@ export function getStudentInsight(
     );
   }).length;
   const lowQuizResults = belowAverageQuizCount >= 2;
-  const lowAssignmentAverage =
-    scoredDueAssignments.length >= 2 &&
-    assignmentAverage !== null &&
-    classAssignmentAverage !== null &&
-    assignmentAverage <= classAssignmentAverage - BELOW_CLASS_AVERAGE_BY;
-  const lowAcademicResults = lowQuizResults || lowAssignmentAverage;
+  const belowAverageAssignmentCount = scoredDueAssignments.filter(
+    (assignment) => {
+      const peerAverage = peerAssignmentAverages[assignment.id];
+
+      return (
+        assignment.score !== undefined &&
+        peerAverage !== null &&
+        assignment.score <= peerAverage - BELOW_CLASS_AVERAGE_BY
+      );
+    },
+  ).length;
+  const lowAssignmentResults = belowAverageAssignmentCount >= 2;
+  const lowAcademicResults = lowQuizResults || lowAssignmentResults;
 
   const academicProblemCount = [
     farBelowExpected,
@@ -282,10 +285,7 @@ export function getStudentInsight(
   const hasEnoughScoredWork =
     attemptedQuizzes.length + scoredDueAssignments.length >= 2;
   const quizResultsAreAcceptable = !lowQuizResults;
-  const assignmentResultsAreAcceptable =
-    assignmentAverage === null ||
-    classAssignmentAverage === null ||
-    assignmentAverage > classAssignmentAverage - BELOW_CLASS_AVERAGE_BY;
+  const assignmentResultsAreAcceptable = !lowAssignmentResults;
   const hasCompleteEnoughData =
     student.telemetryAvailability === "available" &&
     detail.helpRequests !== null;
@@ -320,11 +320,7 @@ export function getStudentInsight(
     reasons.push("Quiz scores below average");
   }
 
-  if (
-    lowAssignmentAverage &&
-    assignmentAverage !== null &&
-    classAssignmentAverage !== null
-  ) {
+  if (lowAssignmentResults) {
     reasons.push("Due-assignment scores below average");
   }
 
@@ -411,15 +407,18 @@ export function getStudentInsights(data: DashboardData) {
       }),
     ]),
   );
-  const dueAssignmentScores = data.studentSummaries.flatMap((student) =>
-    getAssignmentRows(data.course, data.studentDetails[student.id]).flatMap(
-      (assignment) =>
-        assignment.isDue && assignment.score !== undefined
-          ? [assignment.score]
-          : [],
-    ),
+  const assignmentScoresById: Record<
+    string,
+    Array<{ studentId: string; score: number }>
+  > = Object.fromEntries(
+    data.course.assignments.map((assignment) => [
+      assignment.id,
+      Object.entries(data.studentDetails).flatMap(([studentId, detail]) => {
+        const score = getLatestSubmission(detail, assignment.id)?.score;
+        return typeof score === "number" ? [{ studentId, score }] : [];
+      }),
+    ]),
   );
-  const classAssignmentAverage = average(dueAssignmentScores);
 
   return data.studentSummaries
     .map((student) => {
@@ -438,13 +437,28 @@ export function getStudentInsights(data: DashboardData) {
             ];
           }),
         );
+      const peerAssignmentAverages: Record<string, number | null> =
+        Object.fromEntries(
+          data.course.assignments.map((assignment) => {
+            const peerScores = assignmentScoresById[assignment.id]
+              .filter((result) => result.studentId !== student.id)
+              .map((result) => result.score);
+
+            return [
+              assignment.id,
+              peerScores.length >= MIN_ASSIGNMENT_PEERS
+                ? average(peerScores)
+                : null,
+            ];
+          }),
+        );
 
       return getStudentInsight(
         data.course,
         student,
         data.studentDetails[student.id],
         peerQuizAverages,
-        classAssignmentAverage,
+        peerAssignmentAverages,
       );
     })
     .sort((first, second) => {
